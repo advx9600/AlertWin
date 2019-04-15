@@ -1,0 +1,39 @@
+﻿<Window x:Class="Alert.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Alert"
+        mc:Ignorable="d"        
+        Background="Blue"
+        Topmost="True"
+        Title="AlertWindow" Height="307.276" Width="408.206">
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition ></ColumnDefinition>
+            <ColumnDefinition ></ColumnDefinition>
+            <ColumnDefinition ></ColumnDefinition>
+            <ColumnDefinition ></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBox Height="20" Grid.Column="1" TextAlignment="Center" Name="textSetMinute" >30</TextBox>
+        <Button GotFocus="Btn_GotFocus" LostFocus="Btn_LostFocus"  Height="30" Grid.Column="2" Click="ButtonSetTime_Click" Name="btnSetTime">Set Time</Button>
+        <Label Name="labelRemainTime" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" FontSize="20">20 minute and 30 second</Label>
+        <Label Name="labelRestTime" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" FontSize="20">already reset 30 minute</Label>
+        <Button GotFocus="Btn_GotFocus" LostFocus="Btn_LostFocus"  Grid.Row="3"  Height="30" Width="80" Grid.Column="2" Grid.ColumnSpan="2" Name="btnOk" Click="ButtonOk_Click">Ok</Button>
+        
+    </Grid>
+
+    <Window.Resources>
+        <ContextMenu x:Key="menuSystemTray">
+            <MenuItem Name="Close" Header="Close" ></MenuItem>
+            <Separator></Separator>
+        </ContextMenu>
+    </Window.Resources>
+</Window>
